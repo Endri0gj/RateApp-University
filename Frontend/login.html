@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jstyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <!--navigation bar-->
+    <section id="header">
+        <a href='#'><img src="img/logo.jpg " class="logo" alt=" "
+                style="width:90px; height: 36px; border-radius: 13px;"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="aboutus.html">AboutUs</a></li>
+                <li><a href="login.html" class="active">Log in</a></li>
+                <li><a href="SignUp.html">Sign Up</a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <!--login form-->
+    <div class="jcontainer">
+        <div class="wrapper">
+            <header>Login</header>
+            <form id="loginForm" method="post">
+                <div class="field email">
+                    <div class="input-area">
+                        <input type="text" id="email" placeholder="Email Address">
+                        <span class="error error-email" id="error-email"></span>
+                    </div>
+                </div>
+                <div class="field password">
+                    <div class="input-area">
+                        <input type="password" id="password" placeholder="Password">
+                        <span class="error error-password"></span>
+                    </div>
+                </div>
+                <div class="pass-txt"><a href="#" class="pass-txt">Forgot password?</a></div>
+                <input type="submit" value="Login">
+            </form>
+            <div class="sign-txt">Not yet a member? <a href="SignUp.html">Sign up</a></div>
+        </div>
+    </div>
+    
+
+
+    <footer class="section-p1">
+		<div class="col">
+			<img class="logo" src="img/logo.jpg" alt="" style="width:90px; height: 36px; border-radius: 13px;">
+			<h4>Contact</h4>
+			<p><strong>Address:</strong>Sheshi Nënë Tereza 4, Tiranë</p>
+			<p><strong>Phone:</strong>+355 69 99 99 999</p>
+			<p><strong>Hours:</strong> 09:00-21:00,Mon-Sat</p>	
+			<div class="follow">
+				<h4>Follow us</h4>
+				<div class="icon">
+					<a href="https://www.fti.edu.al/"><i class="fab fa-facebook-f"></i></a>
+					<a href="https://www.fti.edu.al/"><i class="fab fa-linkedin"></i></i></a>
+					<a href="https://www.fti.edu.al/"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.fti.edu.al/"><i class="fab fa-youtube"></i></a>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="col">
+			<h4>About</h4>
+			<a href="#">About</a>
+			<a href="#">Contact</a>
+			<a href="#">Privacy Policy</a>
+
+
+		</div>
+
+		<div class="col install">
+			<h4>Install App</h4>
+			<p>From App Store or Google Play</h4>
+			<div class="row">
+				<img src="img/pay/app.jpg" alt="">
+				<img src="img/pay/play.jpg" alt="">	
+			</div>	
+		</div>
+	</footer>
+
+    <script src="loginValidation.js"></script>
+    <script>
+        const bar= document.getElementById('bar');
+        const close= document.getElementById('close');
+        const nav=document.getElementById('navbar');
+        if (bar) {	
+        bar.addEventListener('click',() => {
+        nav.classList.add('active');  
+        })
+        }
+        if (close) {	
+          close.addEventListener('click',() => {
+        nav.classList.remove('active');  
+        })
+        }
+    </script>
+</body>
+
+</html>
